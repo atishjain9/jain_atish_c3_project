@@ -18,15 +18,24 @@ public class Restaurant {
     }
 
     public boolean isRestaurantOpen() {
-        return true;
+        //return true;
         //DELETE ABOVE STATEMENT AND WRITE CODE HERE
+        LocalTime currenTime=getCurrentTime();
+        if (currenTime.isAfter(openingTime) && currenTime.isBefore(closingTime))
+            return true;
+        else {
+            return false;
+        }
     }
 
     public LocalTime getCurrentTime(){ return  LocalTime.now(); }
 
     public List<Item> getMenu() {
-        return null;
+        //return null;
         //DELETE ABOVE RETURN STATEMENT AND WRITE CODE HERE
+        addToMenu("Iddli",50);
+        addToMenu("Dosa",100);
+        return menu;
     }
 
     private Item findItemByName(String itemName){
