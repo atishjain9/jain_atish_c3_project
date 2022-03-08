@@ -78,4 +78,9 @@ class RestaurantTest {
                 ()->restaurant.removeFromMenu("French fries"));
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    @Test
+    public void check_for_order_value()
+    {
+        assertTrue(restaurant.getOrderValue()>0);
+    }
 }

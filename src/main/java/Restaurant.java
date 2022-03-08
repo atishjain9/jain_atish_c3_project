@@ -71,5 +71,14 @@ public class Restaurant {
     public String getName() {
         return name;
     }
+    public int getOrderValue() {
+        int orderValue = 0;
+
+        for (Item item : menu) {
+            orderValue += item.getPrice();
+
+        }
+        return orderValue;
+    }
 
 }
